@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Learning Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>MyLMS</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#cart">Cart</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <div class="banner">
+            <h2>Welcome to MyLMS</h2>
+            <p>Your destination for online learning</p>
+        </div>
+    </section>
+
+    <section id="courses">
+        <h2>Available Courses</h2>
+        <div class="course-list">
+            <div class="course" data-price="50">
+                <h3>Course 1</h3>
+                <p>Introduction to HTML</p>
+                <p>Price: $50</p>
+                <button onclick="addToCart('Course 1', 50)">Add to Cart</button>
+            </div>
+            <div class="course" data-price="75">
+                <h3>Course 2</h3>
+                <p>Advanced CSS Techniques</p>
+                <p>Price: $75</p>
+                <button onclick="addToCart('Course 2', 75)">Add to Cart</button>
+            </div>
+            <div class="course" data-price="100">
+                <h3>Course 3</h3>
+                <p>JavaScript Essentials</p>
+                <p>Price: $100</p>
+                <button onclick="addToCart('Course 3', 100)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="cart">
+        <h2>Your Shopping Cart</h2>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="total">
+            <p>Total: $<span id="totalAmount">0</span></p>
+            <button onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </section>
+
+    <section id="login">
+        <h2>Login to Your Account</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 MyLMS. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
